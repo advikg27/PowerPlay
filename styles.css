@@ -1,0 +1,283 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-size: 1.6rem; /* was 2rem */
+}
+
+.navbar {
+  background-color: #111827;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 2rem; /* was 2.4rem */
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar .nav-link {
+  font-size: 1.6rem; /* was 2rem */
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/home_background.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero h1 {
+  font-size: 4.8rem; /* was 6rem */
+}
+
+.hero p {
+  font-size: 2rem; /* was 2.6rem */
+}
+
+.hero .highlight {
+  color: #38bdf8;
+}
+
+.section {
+  padding: 8rem 3rem;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem; /* was 4rem */
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.section-text {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.8rem; /* was 2.2rem */
+}
+
+.btn-primary {
+  background-color: #facc15;
+  border: none;
+  color: #111827;
+  font-weight: 700;
+  font-size: 1.6rem; /* was 2rem */
+  padding: 1.2rem 2.4rem;
+}
+
+.btn-primary:hover {
+  background-color: #eab308;
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  font-size: 1.6rem; /* was 2rem */
+  padding: 1.2rem 2.4rem;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #111827;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.team-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+}
+
+.team-card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 2rem; /* was 2.4rem */
+}
+
+.card-text {
+  font-size: 1.6rem; /* was 2rem */
+}
+
+.footer {
+  font-size: 1.4rem; /* was 1.8rem */
+  padding: 2.5rem 0;
+  background-color: #111827;
+  color: #ffffff;
+}
+
+/* ABOUT SECTION */
+#about {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+}
+
+#about .section-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+#about .section-text {
+  font-size: 1.6rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* TOURNAMENTS SECTION */
+#events {
+  background-color: #111827;
+  color: #fff;
+  padding: 6rem 2rem;
+}
+
+#events .section-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+#events .section-text {
+  color: #ffffff;
+}
+
+#events .card {
+  background-color: #374151;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 1rem;
+}
+
+#events .card-title {
+  font-size: 1.8rem; /* was 2.2rem */
+  color: #ffffff;
+}
+
+#events .card-text {
+  font-size: 1.6rem; /* was 1.8rem */
+  color: #ffffff;
+}
+
+/* DONATE SECTION */
+#donate {
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 6rem 2rem;
+}
+
+#donate .section-title {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+#donate .section-text {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+#donate .btn-light {
+  background-color: #ffffff;
+  color: #111827;
+  border: none;
+  font-weight: 700;
+}
+
+#donate .btn-light:hover {
+  background-color: #f8f9fa;
+}
+
+/* OUR TEAM SECTION */
+#team {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+}
+
+#team .section-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+#team .section-text {
+  font-size: 1.6rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  color: #333333;
+  line-height: 1.6;
+}
+
+#team .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#team .col-md-4 {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.team-card {
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+}
+
+.team-card .card-title {
+  font-size: 1.8rem;
+  color: #111827;
+}
+
+.team-card .card-text {
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+/* CONTACT SECTION */
+#contact {
+  background-color: #ffffff;
+  color: #111827;
+  padding: 6rem 2rem;
+}
+
+#contact .section-title {
+  font-size: 3rem;
+  color: #111827;
+}
+
+#contact .section-text {
+  font-size: 1.6rem;
+  color: #333333;
+}
+
+#contact .btn-primary {
+  font-size: 1.6rem;
+  background-color: #facc15;
+  color: #111827;
+}
