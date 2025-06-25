@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -280,16 +281,18 @@ body {
 #team .section-title {
   font-size: 2.6rem;
   margin-bottom: 1.8rem;
-  color: #ffffff;
+  color: #111827; /* same as About Us title */
 }
+
 
 #team .section-text {
   font-size: 1.4rem;
   max-width: 900px;
   margin: 0 auto 3rem;
-  color: #e5e7eb;
+  color: #333333;
   line-height: 1.6;
 }
+
 
 #team .row {
   display: flex;
@@ -371,7 +374,7 @@ body {
 
 #contact .section-text {
   font-size: 1.4rem;
-  color: #333333;
+  color: #f1f1f1;
 }
 
 #contact .btn-primary {
