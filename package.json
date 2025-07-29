@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "dev": "npm run dev --prefix powerplay-next"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.7"
+  }
+}

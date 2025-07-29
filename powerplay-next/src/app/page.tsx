@@ -1,0 +1,215 @@
+"use client";
+
+import React, { useState } from 'react';
+
+function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <nav className="navbar glass">
+      <div className="navbar-container">
+        <a className="navbar-brand" href="#home">
+          <img src="/images/logo.png" alt="PowerPlay Logo" />
+          <span>PowerPlay</span>
+        </a>
+
+        <button
+          className="navbar-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
+
+        <ul className={`navbar-nav ${isMenuOpen ? 'active' : ''}`}>
+          <li><a className="nav-link" href="#home">Home</a></li>
+          <li><a className="nav-link" href="#about">About</a></li>
+          <li><a className="nav-link" href="#events">Tournaments</a></li>
+          <li><a className="nav-link" href="#donate">Donate</a></li>
+          <li><a className="nav-link" href="#team">Our Team</a></li>
+          <li><a className="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  );
+}
+
+function HeroSection() {
+  return (
+    <section id="home" className="hero">
+      <div className="hero-content">
+        <h1>Empowering Tomorrow's <span style={{ color: 'var(--accent-blue)' }}>Champions</span></h1>
+        <p>Bringing athletes together through tournaments that inspire, connect, and uplift communities.</p>
+        <a href="#events" className="btn btn-primary">View Tournaments</a>
+      </div>
+    </section>
+  );
+}
+
+function AboutSection() {
+  return (
+    <section id="about" className="section">
+      <div className="section-content">
+        <h2 className="section-title">About Us</h2>
+        <p className="section-text">
+          PowerPlay is dedicated to organizing sports tournaments that foster community, talent, and positive change.
+          We believe in the power of play to transform lives, nurture leadership, and build lifelong connections.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function EventsSection() {
+  return (
+    <section id="events" className="section section-alt">
+      <div className="section-content">
+        <h2 className="section-title">Tournaments</h2>
+        <p className="section-text">
+          Join us for exciting tournaments that bring together athletes from all backgrounds.
+          Experience the thrill of competition while building lasting friendships.
+        </p>
+        <div className="cards-grid">
+          <div className="card">
+            <h3 className="card-title">Cricket Tournament</h3>
+            <p className="card-text">
+              Our premier cricket tournament featuring teams from across the region.
+              Experience the excitement of competitive cricket in a supportive environment.
+            </p>
+            <div className="card-meta">Spring 2024</div>
+            <a href="/cricket" className="btn btn-outline">Learn More</a>
+          </div>
+          <div className="card">
+            <h3 className="card-title">Pickleball Tournament</h3>
+            <p className="card-text">
+              A fun and inclusive pickleball tournament for players of all skill levels.
+              Perfect for both beginners and experienced players.
+            </p>
+            <div className="card-meta">Summer 2024</div>
+            <a href="/pickleball" className="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DonateSection() {
+  return (
+    <section id="donate" className="section">
+      <div className="section-content">
+        <h2 className="section-title">Support the Mission</h2>
+        <p className="section-text">
+          Your support helps us create more opportunities for athletes and build stronger communities.
+          Every contribution makes a difference in someone's life.
+        </p>
+        <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="#contact" className="btn btn-primary">Donate Now</a>
+          <a href="#about" className="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TeamSection() {
+  const teamMembers = [
+    { img: '/images/raghav.png', name: 'Raghav Sridhar', role: 'Co-Founder & President' },
+    { img: '/images/sriram.png', name: 'Sriram Kandalai', role: 'Co-Founder' },
+    { img: '/images/advik.jpeg', name: 'Advik Gupta', role: 'Vice President / Software Lead' },
+    { img: '/images/ishaan.jpeg', name: 'Ishaan Acharya', role: 'COO' },
+    { img: '/images/yuvi.png', name: 'Yuvi', role: 'Social Media Manager' },
+    { img: '/images/vishnu.jpg', name: 'Vishnu', role: 'CFO' },
+    { img: '/images/vedhas.png', name: 'Vedhas', role: 'CIO' },
+    { img: '/images/rochit.jpg', name: 'Rochit', role: 'Marketing Director' },
+  ];
+
+  return (
+    <section id="team" className="section section-alt">
+      <div className="section-content">
+        <h2 className="section-title">Our Team</h2>
+        <p className="section-text">
+          Meet the passionate individuals behind PowerPlay who are dedicated to creating
+          meaningful experiences through sports and community building.
+        </p>
+        <div className="team-grid">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="team-card">
+              <img src={member.img} alt={member.name} />
+              <div className="team-card-content">
+                <h3 className="team-card-name">{member.name}</h3>
+                <p className="team-card-role">{member.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section id="contact" className="section">
+      <div className="section-content">
+        <h2 className="section-title">Contact Us</h2>
+        <p className="section-text">
+          Get in touch with us to learn more about our tournaments, volunteer opportunities,
+          or how you can support our mission.
+        </p>
+        <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="mailto:info@powerplaynpo.org" className="btn btn-primary">Email Us</a>
+          <a href="#about" className="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h3>About PowerPlay</h3>
+          <p>Empowering tomorrow's champions through sports tournaments and community building.</p>
+        </div>
+
+        <div className="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#about">About Us</a>
+          <a href="#events">Tournaments</a>
+          <a href="#team">Our Team</a>
+          <a href="#donate">Donate</a>
+        </div>
+
+        <div className="footer-section">
+          <h3>Contact</h3>
+          <a href="mailto:powerplaynpo@gmail.com">powerplaynpo@gmail.com</a>
+          <p>Get in touch to learn more about our tournaments and how you can get involved.</p>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>&copy; 2025 PowerPlay. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <EventsSection />
+      <DonateSection />
+      <TeamSection />
+      <ContactSection />
+      <Footer />
+    </>
+  );
+}
