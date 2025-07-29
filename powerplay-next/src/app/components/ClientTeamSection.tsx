@@ -58,6 +58,8 @@ export default function ClientTeamSection() {
                         </div>
                     ))}
                 </div>
+                {/* Example of more text with apostrophes */}
+                <p>Don&apos;t miss out on what we&apos;re building!</p>
             </div>
         </section>
     );
