@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function ClientTeamSection() {
     useEffect(() => {
@@ -24,7 +25,7 @@ export default function ClientTeamSection() {
         <section id="team" className="section" style={{ backgroundColor: '#ffffff', padding: '3.5rem 2rem' }}>
             <div className="container text-center">
                 <h2 className="section-title">Our Team</h2>
-                <p className="section-text">We're a team of passionate leaders working together to grow the game and inspire the next generation.</p>
+                <p className="section-text">We&apos;re a team of passionate leaders working together to grow the game and inspire the next generation.</p>
                 <div className="row justify-content-center">
                     {/* Team Members */}
                     {[
@@ -41,7 +42,13 @@ export default function ClientTeamSection() {
                             <div className="card team-card">
                                 <div className="color-bar"></div>
                                 <div className="img-wrapper">
-                                    <img src={member.img} className="card-img-top" alt={member.name} />
+                                    <Image
+                                        src={member.img}
+                                        className="card-img-top"
+                                        alt={member.name}
+                                        width={300}
+                                        height={300}
+                                    />
                                 </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{member.name}</h5>
@@ -54,4 +61,4 @@ export default function ClientTeamSection() {
             </div>
         </section>
     );
-} 
+}
