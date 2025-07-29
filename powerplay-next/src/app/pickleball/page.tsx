@@ -1,14 +1,16 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 function Navbar() {
     return (
         <nav className="navbar navbar-dark glass">
             <div className="navbar-container">
-                <a className="navbar-brand navbar-brand-dark" href="/">
-                    <img src="/images/logo.png" alt="PowerPlay Logo" />
+                <Link className="navbar-brand navbar-brand-dark" href="/">
+                    <Image src="/images/logo.png" alt="PowerPlay Logo" width={40} height={40} />
                     PowerPlay
-                </a>
+                </Link>
                 <div className="navbar-nav navbar-nav-dark">
                     {[
                         { href: "/", text: "HOME" },
@@ -18,9 +20,9 @@ function Navbar() {
                         { href: "/#team", text: "OUR TEAM" },
                         { href: "/#contact", text: "CONTACT" }
                     ].map((link) => (
-                        <a key={link.text} href={link.href} className="nav-link nav-link-dark">
+                        <Link key={link.text} href={link.href} className="nav-link nav-link-dark">
                             {link.text}
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
@@ -47,7 +49,7 @@ export default function PickleballTournamentPage() {
                     <div className="cricket-card">
                         <h2 className="section-title section-title-light">About the Tournament</h2>
                         <p>
-                            The PowerPlay Pickleball Tournament is a fun and inclusive event designed for players of all skill levels. Whether you're a seasoned player or just starting your pickleball journey, this tournament offers the perfect opportunity to compete, learn, and connect with fellow enthusiasts.
+                            The PowerPlay Pickleball Tournament is a fun and inclusive event designed for players of all skill levels. Whether you&apos;re a seasoned player or just starting your pickleball journey, this tournament offers the perfect opportunity to compete, learn, and connect with fellow enthusiasts.
                         </p>
                         <p>
                             <strong>Tournament Format:</strong> Players compete in both singles and doubles categories, with divisions based on skill level to ensure fair and competitive matches. The tournament features round-robin play followed by elimination rounds leading to the championship matches.
@@ -108,4 +110,4 @@ export default function PickleballTournamentPage() {
             </footer>
         </div>
     );
-} 
+}
