@@ -1,38 +1,16 @@
 "use client";
 import React from 'react';
-
-const highlights = [
-    '/images/cricketPowerplay1.jpeg',
-    '/images/cricketPowerplay2.jpeg',
-    '/images/cricketPowerplay3.jpeg',
-    '/images/cricketPowerplay4.jpeg',
-    '/images/cricketPowerplay5.jpeg',
-    '/images/cricketPowerplay6.jpeg',
-];
-
-const HighlightImg = ({ src, alt }: { src: string; alt: string }) => {
-    const isFirstImage = src.includes('cricketPowerplay1');
-
-    return (
-        <div className="highlight-card">
-            <img
-                src={src}
-                alt={alt}
-                className={`highlight-image ${isFirstImage ? 'first-image' : ''}`}
-                onError={e => (e.currentTarget.src = 'https://via.placeholder.com/350x250?text=No+Image')}
-            />
-        </div>
-    );
-};
+import Link from 'next/link';
+import Image from 'next/image';
 
 function Navbar() {
     return (
         <nav className="navbar navbar-dark glass">
             <div className="navbar-container">
-                <a className="navbar-brand navbar-brand-dark" href="/">
-                    <img src="/images/logo.png" alt="PowerPlay Logo" />
+                <Link className="navbar-brand navbar-brand-dark" href="/">
+                    <Image src="/images/logo.png" alt="PowerPlay Logo" width={40} height={40} />
                     PowerPlay
-                </a>
+                </Link>
                 <div className="navbar-nav navbar-nav-dark">
                     {[
                         { href: "/", text: "HOME" },
@@ -42,9 +20,9 @@ function Navbar() {
                         { href: "/#team", text: "OUR TEAM" },
                         { href: "/#contact", text: "CONTACT" }
                     ].map((link) => (
-                        <a key={link.text} href={link.href} className="nav-link nav-link-dark">
+                        <Link key={link.text} href={link.href} className="nav-link nav-link-dark">
                             {link.text}
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
@@ -204,32 +182,32 @@ export default function CricketTournamentPage() {
                     <div className="highlights-grid">
                         <div className="highlight-wrapper">
                             <div className="highlight-card">
-                                <img src="/images/cricketPowerplay1.jpeg" alt="Cricket Match Action" className="highlight-image" />
+                                <Image src="/images/cricketPowerplay1.jpeg" alt="Cricket Match Action" className="highlight-image" width={350} height={250} />
                             </div>
                         </div>
                         <div className="highlight-wrapper">
                             <div className="highlight-card">
-                                <img src="/images/cricketPowerplay2.jpeg" alt="Team Celebration" className="highlight-image" />
+                                <Image src="/images/cricketPowerplay2.jpeg" alt="Team Celebration" className="highlight-image" width={350} height={250} />
                             </div>
                         </div>
                         <div className="highlight-wrapper">
                             <div className="highlight-card">
-                                <img src="/images/cricketPowerplay3.jpeg" alt="Cricket Tournament" className="highlight-image" />
+                                <Image src="/images/cricketPowerplay3.jpeg" alt="Cricket Tournament" className="highlight-image" width={350} height={250} />
                             </div>
                         </div>
                         <div className="highlight-wrapper">
                             <div className="highlight-card">
-                                <img src="/images/cricketPowerplay4.jpeg" alt="Cricket Match Highlights" className="highlight-image" />
+                                <Image src="/images/cricketPowerplay4.jpeg" alt="Cricket Match Highlights" className="highlight-image" width={350} height={250} />
                             </div>
                         </div>
                         <div className="highlight-wrapper">
                             <div className="highlight-card">
-                                <img src="/images/cricketPowerplay5.jpeg" alt="Tournament Action" className="highlight-image" />
+                                <Image src="/images/cricketPowerplay5.jpeg" alt="Tournament Action" className="highlight-image" width={350} height={250} />
                             </div>
                         </div>
                         <div className="highlight-wrapper">
                             <div className="highlight-card">
-                                <img src="/images/cricketPowerplay6.jpeg" alt="Cricket Tournament Highlights" className="highlight-image" />
+                                <Image src="/images/cricketPowerplay6.jpeg" alt="Cricket Tournament Highlights" className="highlight-image" width={350} height={250} />
                             </div>
                         </div>
                     </div>
@@ -244,4 +222,4 @@ export default function CricketTournamentPage() {
             </footer>
         </div>
     );
-} 
+}
