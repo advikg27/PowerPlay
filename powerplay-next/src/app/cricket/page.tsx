@@ -39,7 +39,7 @@ export default function CricketTournamentPage() {
             <div className="cricket-hero">
                 <div className="container">
                     <h1>Cricket Tournament 2025</h1>
-                    <p>January 11 – June 19, 2025 • Frisco, TX</p>
+                    <p>January 11 - June 19, 2025 • Frisco, TX</p>
                 </div>
             </div>
 
@@ -78,12 +78,12 @@ export default function CricketTournamentPage() {
             </div>
 
             {/* Standings Section */}
-            <div className="section section-dark">
+            <div className="section section-dark" id="standings">
                 <div className="container">
                     <h2 className="section-title section-title-light text-center">Current Standings</h2>
                     <div className="standings-card">
                         <div className="table-container">
-                            <table className="standings-table">
+                            <table className="standings-table" aria-label="Cricket Tournament Standings">
                                 <thead>
                                     <tr>
                                         <th>Pos</th>
@@ -176,13 +176,13 @@ export default function CricketTournamentPage() {
             </div>
 
             {/* Tournament Highlights */}
-            <div className="section section-alt-dark">
+            <div className="section section-alt-dark" id="highlights">
                 <div className="container">
                     <h2 className="section-title section-title-light text-center">Tournament Highlights</h2>
                     <div className="highlights-grid">
                         <div className="highlight-wrapper">
                             <div className="highlight-card">
-                                <Image src="/images/cricketPowerplay1.jpeg" alt="Cricket Match Action" className="highlight-image" width={350} height={250} />
+                                <Image src="/images/cricketPowerplay1.jpeg" alt="Cricket Match Action" className="highlight-image" width={350} height={250} priority />
                             </div>
                         </div>
                         <div className="highlight-wrapper">

@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PowerPlay - Empowering Tomorrow's Champions",
-  description: "PowerPlay - Empowering Tomorrow's Champions through sports tournaments and community.",
+  title: "PowerPlay - Empowering Tomorrow&apos;s Champions",
+  description: "PowerPlay - Empowering Tomorrow&apos;s Champions through sports tournaments and community.",
 };
 
 export default function RootLayout({

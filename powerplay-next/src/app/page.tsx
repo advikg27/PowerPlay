@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ function Navbar() {
     <nav className="navbar glass">
       <div className="navbar-container">
         <a className="navbar-brand" href="#home">
-          <img src="/images/logo.png" alt="PowerPlay Logo" />
+          <Image src="/images/logo.png" alt="PowerPlay Logo" width={40} height={40} />
           <span>PowerPlay</span>
         </a>
 
@@ -40,7 +41,7 @@ function HeroSection() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <h1>Empowering Tomorrow's <span style={{ color: 'var(--accent-blue)' }}>Champions</span></h1>
+        <h1>Empowering Tomorrow&apos;s <span style={{ color: 'var(--accent-blue)' }}>Champions</span></h1>
         <p>Bringing athletes together through tournaments that inspire, connect, and uplift communities.</p>
         <a href="#events" className="btn btn-primary">View Tournaments</a>
       </div>
@@ -103,7 +104,7 @@ function DonateSection() {
         <h2 className="section-title">Support the Mission</h2>
         <p className="section-text">
           Your support helps us create more opportunities for athletes and build stronger communities.
-          Every contribution makes a difference in someone's life.
+          Every contribution makes a difference in someone&apos;s life.
         </p>
         <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="#contact" className="btn btn-primary">Donate Now</a>
@@ -137,7 +138,7 @@ function TeamSection() {
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-card">
-              <img src={member.img} alt={member.name} />
+              <Image src={member.img} alt={member.name} width={100} height={100} />
               <div className="team-card-content">
                 <h3 className="team-card-name">{member.name}</h3>
                 <p className="team-card-role">{member.role}</p>
@@ -174,7 +175,7 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section">
           <h3>About PowerPlay</h3>
-          <p>Empowering tomorrow's champions through sports tournaments and community building.</p>
+          <p>Empowering tomorrow&apos;s champions through sports tournaments and community building.</p>
         </div>
 
         <div className="footer-section">

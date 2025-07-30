@@ -39,7 +39,7 @@ export default function PickleballTournamentPage() {
             <div className="pickleball-hero">
                 <div className="container">
                     <h1>Pickleball Tournament 2025</h1>
-                    <p>July 6, 2025 • 2:00 PM – 7:00 PM</p>
+                    <p>July 6, 2025 • 2:00 PM - 7:00 PM</p>
                 </div>
             </div>
 
