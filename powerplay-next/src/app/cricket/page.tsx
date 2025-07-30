@@ -218,6 +218,7 @@ export default function CricketTournamentPage() {
             <footer className="footer footer-dark">
                 <div className="footer-content">
                     <p>&copy; 2025 PowerPlay. All rights reserved.</p>
+                    <p>We&apos;re grateful for everyone&apos;s support and can&apos;t wait for next season!</p>
                 </div>
             </footer>
         </div>
