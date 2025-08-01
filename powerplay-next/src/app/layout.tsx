@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +28,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="preload" as="image" href="/images/home_background.jpg" />
       </head>
-      <body className={inter.className}>{children}<Analytics /></body>
+      <body className={inter.className}>{children}
+        <Analytics />
+        </body>
     </html>
   );
 }
