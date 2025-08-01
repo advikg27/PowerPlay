@@ -136,9 +136,7 @@ function TeamSection() {
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-card">
-<<<<<<< HEAD
-              <Image src={member.img} alt={member.name} width={100} height={100} />
-=======
+
 <div style={{
   width: '100%',
   aspectRatio: '1 / 1',
@@ -157,7 +155,7 @@ function TeamSection() {
   />
 </div>
 
->>>>>>> 787cb0b (Updated team section UI and images)
+ 787cb0b (Updated team section UI and images)
               <div className="team-card-content">
                 <h3 className="team-card-name">{member.name}</h3>
                 <p className="team-card-role">{member.role}</p>

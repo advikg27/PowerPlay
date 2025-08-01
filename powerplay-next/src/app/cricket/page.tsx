@@ -39,11 +39,7 @@ export default function CricketTournamentPage() {
             <div className="cricket-hero">
                 <div className="container">
                     <h1>Cricket Tournament 2025</h1>
-<<<<<<< HEAD
                     <p>January 11 - June 19, 2025 • Frisco, TX</p>
-=======
-                    <p>January 11 – June 19, 2025 Frisco, TX</p>
->>>>>>> 787cb0b (Updated team section UI and images)
                 </div>
             </div>
 
