@@ -52,14 +52,14 @@ export default function CricketTournamentPage() {
                             The 2025 PowerPlay Cricket Tournament united athletes from across Texas in a high-energy event supporting youth sports access.
                         </p>
                         <p>
-                            In the final, Rockhill defeated Heritage, led by Bhavya Hooda's 73-run performance.  
+                            In the final, Rockhill defeated Heritage, led by Bhavya Hooda&apos;s 73-run performance.  
                             Sushant Kumar Vetapalem (Lebanon Trail) earned MVP honors for his play.
                         </p>
                         <p>
                             Before the match, former Pakistan international Asif Mujtaba delivered an inspiring speech that energized both teams.
                         </p>
                         <div className="button-group">
-                            <a href="https://cricheroes.com/tournament/1200891/PowerPlay-Cricket-Tournament" className="btn btn-outline-light" target="_blank">View Full Stats</a>
+                            <a href="https://cricheroes.com/tournament/1200891/PowerPlay-Cricket-Tournament" className="btn btn-outline-light" target="_blank" rel="noopener noreferrer">View Full Stats</a>
                         </div>
                     </div>
                 </div>
@@ -189,36 +189,19 @@ export default function CricketTournamentPage() {
                 <div className="container">
                     <h2 className="section-title section-title-light text-center">Tournament Highlights</h2>
                     <div className="highlights-grid">
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/cricketPowerplay1.jpeg" alt="Cricket Match Action" className="highlight-image" width={350} height={250} priority />
+                        {[1,2,3,4,5,6].map((num) => (
+                            <div className="highlight-wrapper" key={num}>
+                                <div className="highlight-card">
+                                    <Image
+                                        src={`/images/cricketPowerplay${num}.jpeg`}
+                                        alt={`Cricket Highlight ${num}`}
+                                        className="highlight-image"
+                                        width={350}
+                                        height={250}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/cricketPowerplay2.jpeg" alt="Team Celebration" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/cricketPowerplay3.jpeg" alt="Cricket Tournament" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/cricketPowerplay4.jpeg" alt="Cricket Match Highlights" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/cricketPowerplay5.jpeg" alt="Tournament Action" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/cricketPowerplay6.jpeg" alt="Cricket Tournament Highlights" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

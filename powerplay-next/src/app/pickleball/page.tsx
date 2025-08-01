@@ -52,7 +52,7 @@ export default function PickleballTournamentPage() {
                             The 2025 PowerPlay Pickleball Tournament brought together players from across the region for an exciting day of competitive doubles play. The tournament featured a single-elimination bracket format with 10 teams competing for the championship title.
                         </p>
                         <p>
-                            The tournament showcased incredible sportsmanship and skill, with close matches throughout the day. The final match was a thrilling showdown between two talented teams, with Adithan & Ritvick emerging as the tournament champions.
+                            The tournament showcased incredible sportsmanship and skill, with close matches throughout the day. The final match was a thrilling showdown between two talented teams, with Adithan &amp; Ritvick emerging as the tournament champions.
                         </p>
                         <p>
                             Special thanks to all participants and volunteers for making this tournament a memorable success. The event raised funds to support the fight against pediatric cancer.
@@ -66,65 +66,47 @@ export default function PickleballTournamentPage() {
                 <div className="container">
                     <h2 className="section-title section-title-light text-center">Tournament Results</h2>
                     <div className="scorecard-card">
-                        <div className="scorecard-row">🏆 Champions: Adithan & Ritvick</div>
-                        <div className="scorecard-row">🥈 Runner-up: Biswajit & Arvind</div>
-                        
+                        <div className="scorecard-row">🏆 Champions: Adithan &amp; Ritvick</div>
+                        <div className="scorecard-row">🥈 Runner-up: Biswajit &amp; Arvind</div>
                     </div>
                 </div>
             </div>
 
-        {/* Tournament Bracket Results */}
-<div className="section section-dark">
-    <div className="container">
-        <h2 className="section-title section-title-light text-center">Tournament Bracket</h2>
-        <div className="standings-card text-center">
-            <Image 
-                src="/images/pickleballBracket.jpeg"
-                alt="Pickleball Tournament Bracket" 
-                width={800} 
-                height={500} 
-                className="img-fluid" 
-                priority 
-            />
-        </div>
-    </div>
-</div>
+            {/* Tournament Bracket Results */}
+            <div className="section section-dark">
+                <div className="container">
+                    <h2 className="section-title section-title-light text-center">Tournament Bracket</h2>
+                    <div className="standings-card text-center">
+                        <Image 
+                            src="/images/pickleballBracket.jpeg"
+                            alt="Pickleball Tournament Bracket" 
+                            width={800} 
+                            height={500} 
+                            className="img-fluid" 
+                            priority 
+                        />
+                    </div>
+                </div>
+            </div>
 
             {/* Tournament Highlights */}
             <div className="section section-alt-dark">
                 <div className="container">
                     <h2 className="section-title section-title-light text-center">Tournament Highlights</h2>
                     <div className="highlights-grid">
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/pickleballPowerplay1.jpeg" alt="Pickleball Tournament Action" className="highlight-image" width={350} height={250} priority />
+                        {[1, 2, 3, 4, 5, 6].map((num) => (
+                            <div className="highlight-wrapper" key={num}>
+                                <div className="highlight-card">
+                                    <Image
+                                        src={`/images/pickleballPowerplay${num}.jpeg`}
+                                        alt={`Pickleball Highlight ${num}`}
+                                        className="highlight-image"
+                                        width={350}
+                                        height={250}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/pickleballPowerplay2.jpeg" alt="Team Celebration" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/pickleballPowerplay3.jpeg" alt="Pickleball Tournament" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/pickleballPowerplay4.jpeg" alt="Pickleball Match Highlights" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/pickleballPowerplay5.jpeg" alt="Tournament Action" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
-                        <div className="highlight-wrapper">
-                            <div className="highlight-card">
-                                <Image src="/images/pickleballPowerplay6.jpeg" alt="Pickleball Tournament Highlights" className="highlight-image" width={350} height={250} />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
