@@ -49,54 +49,81 @@ export default function PickleballTournamentPage() {
                     <div className="cricket-card">
                         <h2 className="section-title section-title-light">About the Tournament</h2>
                         <p>
-                            The PowerPlay Pickleball Tournament is a fun and inclusive event designed for players of all skill levels. Whether you&apos;re a seasoned player or just starting your pickleball journey, this tournament offers the perfect opportunity to compete, learn, and connect with fellow enthusiasts.
+                            The 2025 PowerPlay Pickleball Tournament brought together players from across the region for an exciting day of competitive doubles play. The tournament featured a single-elimination bracket format with 10 teams competing for the championship title.
                         </p>
                         <p>
-                            <strong>Tournament Format:</strong> Players compete in both singles and doubles categories, with divisions based on skill level to ensure fair and competitive matches. The tournament features round-robin play followed by elimination rounds leading to the championship matches.
+                            The tournament showcased incredible sportsmanship and skill, with close matches throughout the day. The final match was a thrilling showdown between two talented teams, with Adithan & Ritvick emerging as the tournament champions.
                         </p>
                         <p>
-                            <strong>Community Focus:</strong> Beyond the competition, this tournament emphasizes sportsmanship, camaraderie, and community building. We believe that pickleball has the power to bring people together and create lasting friendships through the shared love of the game.
+                            Special thanks to all participants and volunteers for making this tournament a memorable success. The event raised funds to support the fight against pediatric cancer.
                         </p>
                     </div>
                 </div>
             </div>
 
-            {/* Tournament Details */}
+            {/* Final Results Section */}
             <div className="section section-alt-dark">
                 <div className="container">
-                    <h2 className="section-title section-title-light text-center">Tournament Details</h2>
-                    <div className="details-card">
-                        <div className="details-grid">
-                            <div className="detail-item">
-                                <h3>Date & Time</h3>
-                                <p>July 6, 2025<br />2:00 PM - 7:00 PM</p>
-                            </div>
-                            <div className="detail-item">
-                                <h3>Location</h3>
-                                <p>North Texas Racquet Club<br />Frisco, TX</p>
-                            </div>
-                            <div className="detail-item">
-                                <h3>Entry Fee</h3>
-                                <p>$15 per player<br />Includes tournament t-shirt</p>
-                            </div>
-                            <div className="detail-item">
-                                <h3>Prize Pool</h3>
-                                <p>$100 Cash Prize<br />Trophies for winners</p>
-                            </div>
-                            <div className="detail-item">
-                                <h3>Divisions</h3>
-                                <p>Singles & Doubles<br />Beginner, Intermediate, Advanced</p>
-                            </div>
-                            <div className="detail-item">
-                                <h3>Registration</h3>
-                                <p>Limited spots available<br />Register early to secure your place</p>
+                    <h2 className="section-title section-title-light text-center">Tournament Results</h2>
+                    <div className="scorecard-card">
+                        <div className="scorecard-row">🏆 Champions: Adithan & Ritvick</div>
+                        <div className="scorecard-row">🥈 Runner-up: Biswajit & Arvind</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        {/* Tournament Bracket Results */}
+<div className="section section-dark">
+    <div className="container">
+        <h2 className="section-title section-title-light text-center">Tournament Bracket</h2>
+        <div className="standings-card text-center">
+            <Image 
+                src="/images/pickleballBracket.jpeg"
+                alt="Pickleball Tournament Bracket" 
+                width={800} 
+                height={500} 
+                className="img-fluid" 
+                priority 
+            />
+        </div>
+    </div>
+</div>
+
+            {/* Tournament Highlights */}
+            <div className="section section-alt-dark">
+                <div className="container">
+                    <h2 className="section-title section-title-light text-center">Tournament Highlights</h2>
+                    <div className="highlights-grid">
+                        <div className="highlight-wrapper">
+                            <div className="highlight-card">
+                                <Image src="/images/pickleballPowerplay1.jpeg" alt="Pickleball Tournament Action" className="highlight-image" width={350} height={250} priority />
                             </div>
                         </div>
-                        <div className="button-group">
-                            <a href="https://forms.gle/Em1ggcUNKBDgq23T9" className="btn btn-outline-light" target="_blank" rel="noopener noreferrer">
-                                Sign Up Now
-                            </a>
-                            <a href="#contact" className="btn btn-outline-light">Contact Us</a>
+                        <div className="highlight-wrapper">
+                            <div className="highlight-card">
+                                <Image src="/images/pickleballPowerplay2.jpeg" alt="Team Celebration" className="highlight-image" width={350} height={250} />
+                            </div>
+                        </div>
+                        <div className="highlight-wrapper">
+                            <div className="highlight-card">
+                                <Image src="/images/pickleballPowerplay3.jpeg" alt="Pickleball Tournament" className="highlight-image" width={350} height={250} />
+                            </div>
+                        </div>
+                        <div className="highlight-wrapper">
+                            <div className="highlight-card">
+                                <Image src="/images/pickleballPowerplay4.jpeg" alt="Pickleball Match Highlights" className="highlight-image" width={350} height={250} />
+                            </div>
+                        </div>
+                        <div className="highlight-wrapper">
+                            <div className="highlight-card">
+                                <Image src="/images/pickleballPowerplay5.jpeg" alt="Tournament Action" className="highlight-image" width={350} height={250} />
+                            </div>
+                        </div>
+                        <div className="highlight-wrapper">
+                            <div className="highlight-card">
+                                <Image src="/images/pickleballPowerplay6.jpeg" alt="Pickleball Tournament Highlights" className="highlight-image" width={350} height={250} />
+                            </div>
                         </div>
                     </div>
                 </div>

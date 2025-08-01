@@ -1,19 +1,10 @@
-"use client";
-
 import React, { useEffect } from 'react';
-import Image from 'next/image';
 
-export default function ClientTeamSection() {
+export default function TeamSection() {
     useEffect(() => {
         const teamColors = [
-            "#dc2626", // red
-            "#3b82f6", // blue
-            "#10b981", // green
-            "#f59e0b", // amber
-            "#8b5cf6", // purple
-            "#ec4899", // pink
-            "#14b8a6", // teal
-            "#f43f5e"  // rose
+            "rgb(220, 38, 38)", "rgb(59, 130, 246)", "rgb(16, 185, 129)", "rgb(245, 158, 11)",
+            "rgb(139, 92, 246)", "rgb(236, 72, 153)", "rgb(20, 184, 166)", "rgb(244, 63, 94)"
         ];
         document.querySelectorAll('.color-bar').forEach(bar => {
             const color = teamColors[Math.floor(Math.random() * teamColors.length)];
@@ -21,45 +12,67 @@ export default function ClientTeamSection() {
         });
     }, []);
 
+    const teamMembers = [
+        { img: '/images/raghav.png', name: 'Raghav Sridhar', role: 'Co-Founder & President' },
+        { img: '/images/advik.jpeg', name: 'Advik Gupta', role: 'Vice President & CTO' },
+        { img: '/images/ishaan.jpeg', name: 'Ishaan Acharya', role: 'CFO' },
+        { img: '/images/aryan.jpeg', name: 'Aryan Gokul', role: 'COO' },
+        { img: '/images/vedhas.png', name: 'Vedhas', role: 'CAO' },
+        { img: '/images/rochit.jpg', name: 'Rochit', role: 'Marketing Director' },
+    ];
+
     return (
-        <section id="team" className="section" style={{ backgroundColor: '#ffffff', padding: '3.5rem 2rem' }}>
-            <div className="container text-center">
-                <h2 className="section-title">Our Team</h2>
-                <p className="section-text">We&apos;re a team of passionate leaders working together to grow the game and inspire the next generation.</p>
-                <div className="row justify-content-center">
-                    {/* Team Members */}
-                    {[
-                        { img: '/images/raghav.png', name: 'Raghav Sridhar', role: 'Co-Founder & President' },
-                        { img: '/images/sriram.png', name: 'Sriram Kandalai', role: 'Co-Founder' },
-                        { img: '/images/advik.jpeg', name: 'Advik Gupta', role: 'Vice President / Software Lead' },
-                        { img: '/images/ishaan.jpeg', name: 'Ishaan Acharya', role: 'COO' },
-                        { img: '/images/yuvi.png', name: 'Yuvi', role: 'Social Media Manager' },
-                        { img: '/images/vishnu.jpg', name: 'Vishnu', role: 'CFO' },
-                        { img: '/images/vedhas.png', name: 'Vedhas', role: 'CIO' },
-                        { img: '/images/rochit.jpg', name: 'Rochit', role: 'Marketing Director' },
-                    ].map((member) => (
-                        <div className="col-md-4 mb-4" key={member.name}>
-                            <div className="card team-card">
-                                <div className="color-bar"></div>
-                                <div className="img-wrapper">
-                                    <Image
-                                        src={member.img}
-                                        className="card-img-top"
-                                        alt={member.name}
-                                        width={300}
-                                        height={300}
-                                    />
-                                </div>
-                                <div className="card-body">
-                                    <h5 className="card-title">{member.name}</h5>
-                                    <p className="card-text">{member.role}</p>
+        <section id="team" className="py-16 px-8 bg-background">
+            <div className="max-w-6xl mx-auto text-center">
+                <h2 className="text-4xl font-bold mb-4 text-foreground">Our Team</h2>
+                <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+                    We're a team of passionate leaders working together to grow the game and inspire the next generation.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                    {teamMembers.map((member) => (
+                        <div key={member.name} className="group">
+                            <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div className="color-bar h-1"></div>
+                                <div className="p-6">
+                                <div
+  className="mx-auto mb-6"
+  style={{
+    width: '200px',
+    height: '200px',
+    borderRadius: '1rem',
+    overflow: 'hidden',
+    backgroundColor: '#1f2937', // same as bg-gray-800
+    position: 'relative'
+  }}
+>
+  <img
+    src={member.img}
+    alt={member.name}
+    style={{
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      objectPosition: 'center',
+      transition: 'transform 0.5s ease',
+    }}
+    className="group-hover:scale-105"
+  />
+</div>
+
+                                    <div className="text-center">
+                                        <h5 className="text-2xl font-bold text-white mb-2">{member.name}</h5>
+                                        <p className="text-gray-300 text-lg">{member.role}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-                {/* Example of more text with apostrophes */}
-                <p>Don&apos;t miss out on what we&apos;re building!</p>
+                
+                <p className="text-lg text-muted-foreground">
+                    Don't miss out on what we're building!
+                </p>
             </div>
         </section>
     );

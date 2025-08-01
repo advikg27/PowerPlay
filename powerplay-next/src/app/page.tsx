@@ -79,8 +79,8 @@ function EventsSection() {
               Our premier cricket tournament featuring teams from across the region.
               Experience the excitement of competitive cricket in a supportive environment.
             </p>
-            <div className="card-meta">Spring 2024</div>
-            <a href="/cricket" className="btn btn-outline">Learn More</a>
+            <div className="card-meta">January - June 2025</div>
+            <a href="/cricket" className="btn btn-outline">View Tournament</a>
           </div>
           <div className="card">
             <h3 className="card-title">Pickleball Tournament</h3>
@@ -88,8 +88,8 @@ function EventsSection() {
               A fun and inclusive pickleball tournament for players of all skill levels.
               Perfect for both beginners and experienced players.
             </p>
-            <div className="card-meta">Summer 2024</div>
-            <a href="/pickleball" className="btn btn-outline">Learn More</a>
+            <div className="card-meta">July 2025</div>
+            <a href="/pickleball" className="btn btn-outline">View Tournament</a>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ function DonateSection() {
           Every contribution makes a difference in someone&apos;s life.
         </p>
         <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#contact" className="btn btn-primary">Donate Now</a>
+          <a href="https://hcb.hackclub.com/donations/start/powerplay" className="btn btn-primary">Donate Now</a>
           <a href="#about" className="btn btn-outline">Learn More</a>
         </div>
       </div>
@@ -117,13 +117,11 @@ function DonateSection() {
 
 function TeamSection() {
   const teamMembers = [
-    { img: '/images/raghav.png', name: 'Raghav Sridhar', role: 'Co-Founder & President' },
-    { img: '/images/sriram.png', name: 'Sriram Kandalai', role: 'Co-Founder' },
-    { img: '/images/advik.jpeg', name: 'Advik Gupta', role: 'Vice President / Software Lead' },
-    { img: '/images/ishaan.jpeg', name: 'Ishaan Acharya', role: 'COO' },
-    { img: '/images/yuvi.png', name: 'Yuvi', role: 'Social Media Manager' },
-    { img: '/images/vishnu.jpg', name: 'Vishnu', role: 'CFO' },
-    { img: '/images/vedhas.png', name: 'Vedhas', role: 'CIO' },
+    { img: '/images/raghav.png', name: 'Raghav Sridhar', role: 'Founder & President' },
+    { img: '/images/advik.jpeg', name: 'Advik Gupta', role: 'Vice President / CTO' },
+    { img: '/images/aryan.jpeg', name: 'Aryan Gokul', role: 'COO' },
+    { img: '/images/ishaan.jpeg', name: 'Ishaan Acharya', role: 'CFO' },
+    { img: '/images/vedhas.png', name: 'Vedhas', role: 'CAO' },
     { img: '/images/rochit.jpg', name: 'Rochit', role: 'Marketing Director' },
   ];
 
@@ -138,7 +136,28 @@ function TeamSection() {
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-card">
+<<<<<<< HEAD
               <Image src={member.img} alt={member.name} width={100} height={100} />
+=======
+<div style={{
+  width: '100%',
+  aspectRatio: '1 / 1',
+  borderRadius: '1rem',
+  overflow: 'hidden',
+  backgroundColor: '#1f2937',
+  position: 'relative',
+}}>
+  <Image
+    src={member.img}
+    alt={member.name}
+    fill
+    style={{
+      objectFit: 'cover',
+    }}
+  />
+</div>
+
+>>>>>>> 787cb0b (Updated team section UI and images)
               <div className="team-card-content">
                 <h3 className="team-card-name">{member.name}</h3>
                 <p className="team-card-role">{member.role}</p>

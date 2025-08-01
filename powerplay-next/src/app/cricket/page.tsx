@@ -39,7 +39,11 @@ export default function CricketTournamentPage() {
             <div className="cricket-hero">
                 <div className="container">
                     <h1>Cricket Tournament 2025</h1>
+<<<<<<< HEAD
                     <p>January 11 - June 19, 2025 • Frisco, TX</p>
+=======
+                    <p>January 11 – June 19, 2025 Frisco, TX</p>
+>>>>>>> 787cb0b (Updated team section UI and images)
                 </div>
             </div>
 
@@ -49,30 +53,30 @@ export default function CricketTournamentPage() {
                     <div className="cricket-card">
                         <h2 className="section-title section-title-light">About the Tournament</h2>
                         <p>
-                            The PowerPlay Cricket Tournament is our flagship event, bringing together teams from across the region for an exciting season of competitive cricket. This tournament spans multiple months, providing players with the opportunity to showcase their skills, build lasting friendships, and experience the thrill of organized competition.
+                            The 2025 PowerPlay Cricket Tournament united athletes from across Texas in a high-energy event supporting youth sports access.
                         </p>
                         <p>
-                            <strong>Tournament Format:</strong> Teams compete in a league format with playoffs leading to the championship match. Each team plays multiple matches throughout the season, ensuring plenty of action and opportunities for all participants.
+                            In the final, Rockhill defeated Heritage, led by Bhavya Hooda's 73-run performance.  
+                            Sushant Kumar Vetapalem (Lebanon Trail) earned MVP honors for his play.
                         </p>
                         <p>
-                            <strong>Community Focus:</strong> Beyond the competition, this tournament emphasizes sportsmanship, teamwork, and community building. We believe that cricket has the power to bring people together and create meaningful connections that extend beyond the field.
+                            Before the match, former Pakistan international Asif Mujtaba delivered an inspiring speech that energized both teams.
                         </p>
+                        <div className="button-group">
+                            <a href="https://cricheroes.com/tournament/1200891/PowerPlay-Cricket-Tournament" className="btn btn-outline-light" target="_blank">View Full Stats</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* Scorecard Section */}
+            {/* Final Scorecard Section */}
             <div className="section section-alt-dark">
                 <div className="container">
-                    <h2 className="section-title section-title-light text-center">Recent Match Results</h2>
+                    <h2 className="section-title section-title-light text-center">Final Match Scorecard</h2>
                     <div className="scorecard-card">
-                        <div className="scorecard-row winner">🏆 Team Blue Eagles - 185/6 (20 overs)</div>
-                        <div className="scorecard-row">Team Red Lions - 172/8 (20 overs)</div>
-                        <div className="scorecard-mvp">⭐ MVP: Rahul Sharma (Blue Eagles) - 45 runs, 3 wickets</div>
-                    </div>
-                    <div className="button-group">
-                        <a href="#standings" className="btn btn-outline-light">View Standings</a>
-                        <a href="#highlights" className="btn btn-outline-light">Match Highlights</a>
+                        <div className="scorecard-row">Heritage: 149/3</div>
+                        <div className="scorecard-row winner">Rockhill: 150/1 (18.2 overs)</div>
+                        <div className="scorecard-mvp">🏅 Player of the Match: Bhavya Hooda – 73*</div>
                     </div>
                 </div>
             </div>
@@ -80,93 +84,102 @@ export default function CricketTournamentPage() {
             {/* Standings Section */}
             <div className="section section-dark" id="standings">
                 <div className="container">
-                    <h2 className="section-title section-title-light text-center">Current Standings</h2>
+                    <h2 className="section-title section-title-light text-center">League Standings</h2>
                     <div className="standings-card">
                         <div className="table-container">
                             <table className="standings-table" aria-label="Cricket Tournament Standings">
                                 <thead>
                                     <tr>
-                                        <th>Pos</th>
+                                        <th>#</th>
                                         <th>Team</th>
-                                        <th>P</th>
-                                        <th>W</th>
-                                        <th>L</th>
+                                        <th>Mat</th>
+                                        <th>Won</th>
+                                        <th>Lost</th>
+                                        <th>Drawn</th>
+                                        <th>Tied</th>
+                                        <th>N/R</th>
                                         <th>NRR</th>
+                                        <th>For</th>
+                                        <th>Against</th>
                                         <th>Pts</th>
+                                        <th>Last 5</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td className="team-name">Blue Eagles</td>
-                                        <td>8</td>
-                                        <td>7</td>
+                                        <td className="team-name">LTHS Challengers</td>
+                                        <td>4</td>
+                                        <td>2</td>
                                         <td>1</td>
-                                        <td>+1.85</td>
-                                        <td>14</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td className="team-name">Red Lions</td>
-                                        <td>8</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>+1.23</td>
-                                        <td>12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td className="team-name">Green Warriors</td>
-                                        <td>8</td>
-                                        <td>5</td>
-                                        <td>3</td>
-                                        <td>+0.67</td>
-                                        <td>10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td className="team-name">Yellow Strikers</td>
-                                        <td>8</td>
-                                        <td>4</td>
-                                        <td>4</td>
-                                        <td>+0.12</td>
-                                        <td>8</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td className="team-name">Purple Panthers</td>
-                                        <td>8</td>
-                                        <td>3</td>
-                                        <td>5</td>
-                                        <td>-0.45</td>
-                                        <td>6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td className="team-name">Orange Crushers</td>
-                                        <td>8</td>
-                                        <td>2</td>
-                                        <td>6</td>
-                                        <td>-0.89</td>
-                                        <td>4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td className="team-name">Pink Phoenix</td>
-                                        <td>8</td>
-                                        <td>2</td>
-                                        <td>6</td>
-                                        <td>-1.12</td>
-                                        <td>4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td className="team-name">Black Knights</td>
-                                        <td>8</td>
+                                        <td>0</td>
+                                        <td>0</td>
                                         <td>1</td>
-                                        <td>7</td>
-                                        <td>-1.45</td>
+                                        <td>0.629</td>
+                                        <td>222/44.1</td>
+                                        <td>214/48.4</td>
+                                        <td>5</td>
+                                        <td>L–W–W</td>
+                                    </tr>
+                                    <tr>
                                         <td>2</td>
+                                        <td className="team-name">Walnut Grove Wildcats</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>3.419</td>
+                                        <td>307/46</td>
+                                        <td>166/51</td>
+                                        <td>4</td>
+                                        <td>W–L–W</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td className="team-name">Heritage Cricket Team</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>-0.546</td>
+                                        <td>154/39.4</td>
+                                        <td>155/35</td>
+                                        <td>3</td>
+                                        <td>W–L</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td className="team-name">Wakeland Wolverines</td>
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>-7.350</td>
+                                        <td>32/20</td>
+                                        <td>179/20</td>
+                                        <td>2</td>
+                                        <td>L</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td className="team-name">BLUE HAWKS</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>-1.667</td>
+                                        <td>78/18</td>
+                                        <td>79/13.1</td>
+                                        <td>0</td>
+                                        <td>L</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -218,7 +231,6 @@ export default function CricketTournamentPage() {
             <footer className="footer footer-dark">
                 <div className="footer-content">
                     <p>&copy; 2025 PowerPlay. All rights reserved.</p>
-                    <p>We&apos;re grateful for everyone&apos;s support and can&apos;t wait for next season!</p>
                 </div>
             </footer>
         </div>
