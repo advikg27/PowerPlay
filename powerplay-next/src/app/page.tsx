@@ -42,7 +42,7 @@ function HeroSection() {
     <section id="home" className="hero">
       <div className="hero-content">
         <h1 className="fade-in-up">
-          <span className="hero-line hero-first">Empowering Tomorrow's</span>
+          <span className="hero-line hero-first">Empowering Tomorrow&apos;s</span>
           <span className="hero-line solid-text">Champions</span>
         </h1>
         <p className="lead fade-in-up" style={{ animationDelay: '0.2s' }}>
